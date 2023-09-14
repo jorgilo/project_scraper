@@ -1,6 +1,6 @@
+import requests
 import pandas as pd
 from datetime import datetime
-import requests
 
 def enviar_alerta_discord(fpath):
     today = datetime.now()
@@ -27,4 +27,3 @@ def enviar_alerta_discord(fpath):
         data = {"username": "Gg", "content": mensaje}
         status_discord = requests.post(url, json=data)
         print(status_discord)
-
